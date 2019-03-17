@@ -13,29 +13,24 @@
 
     /* The item currently selected by the user (bound to the view) */
     $scope.selected = {
-      Entry         : parseInt($stateParams.id, 10),
-      Item          : 0,
-      Reference     : 0,
-      Chance        : 100,
-      QuestRequired : 0,
-      LootMode      : 1,
-      GroupId       : 0,
-      MinCount      : 1,
-      MaxCount      : 1,
-      Comment       : ''
+      entry                 : parseInt($stateParams.id, 10),
+      item                  : 0,
+      ChanceOrQuestChance   : 100,
+      lootmode              : 1,
+      groupid               : 1,
+      mincountOrRef         : 0,
+      maxcount              : 0
     };
 
     /* Type check */
     $scope.parseValues = function() {
 
-      $scope.selected.Item          = parseInt($scope.selected.Item, 10);
-      $scope.selected.Reference     = parseInt($scope.selected.Reference, 10);
-      $scope.selected.Chance        = parseFloat($scope.selected.Chance, 10);
-      $scope.selected.QuestRequired = parseInt($scope.selected.QuestRequired, 10);
-      $scope.selected.LootMode      = parseInt($scope.selected.LootMode, 10);
-      $scope.selected.GroupId       = parseInt($scope.selected.GroupId, 10);
-      $scope.selected.MinCount      = parseInt($scope.selected.MinCount, 10);
-      $scope.selected.MaxCount      = parseInt($scope.selected.MaxCount, 10);
+      $scope.selected.item                  = parseInt($scope.selected.item, 10);
+      $scope.selected.ChanceOrQuestChance   = parseFloat($scope.selected.ChanceOrQuestChance, 10);
+      $scope.selected.lootmode              = parseInt($scope.selected.lootmode, 10);
+      $scope.selected.groupid               = parseInt($scope.selected.groupid, 10);
+      $scope.selected.mincountOrRef         = parseInt($scope.selected.mincountOrRef, 10);
+      $scope.selected.maxcount              = parseInt($scope.selected.maxcount, 10);
     };
 
     /* Select a row from collection */

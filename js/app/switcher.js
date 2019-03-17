@@ -10,8 +10,7 @@
 
     /* Versions */
     $scope.versions = [
-      { name: "3.3.5" },
-      { name: "6.x" }
+      { name: "5.4.8" }
     ];
 
     /* Themes */
