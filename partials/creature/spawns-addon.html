@@ -34,9 +34,21 @@
         <div class="input-group">
           <input class="form-control input-xs" type="text" ng-model="selected.emote">
           <div class="input-group-btn">
-            <button class="btn btn-info input-xs" ng-click="openValueModal(selected, 'emote')">...</button>
+          <button class="btn btn-info input-xs" ng-click="openValueModal(selected, 'emote')">...</button>
           </div>
         </div>
+      </div>
+      <div class="col-xs-3">
+        <small>aiAnimKit</small>
+        <input class="form-control input-xs" type="text"  ng-model="selected.aiAnimKit">
+      </div>
+      <div class="col-xs-3">
+        <small>movementAnimKit</small>
+        <input class="form-control input-xs" type="text" ng-model="selected.movementAnimKit">
+      </div>
+      <div class="col-xs-3">
+        <small>meleeAnimKit</small>
+        <input class="form-control input-xs" type="text" ng-model="selected.meleeAnimKit">
       </div>
       <div class="col-xs-3">
         <small>auras</small>
@@ -68,6 +80,9 @@
     <th class="text-center">bytes1</th>
     <th class="text-center">bytes2</th>
     <th class="text-center">emote</th>
+    <th class="text-center">aiAnimKit</th>
+    <th class="text-center">movementAnimKit</th>
+    <th class="text-center">meleeAnimKit</th>
     <th class="text-center">auras</th>
   </thead>
   <tr ng-repeat="spawn in new_creature_addon track by $index" ng-click="selectRow(new_creature_addon, $index)" ng-class="{'tr-selected': $index == selectedRow}" id="{{ $index }}">
@@ -78,6 +93,9 @@
     <td>{{ spawn.bytes1 }}</td>
     <td>{{ spawn.bytes2 }}</td>
     <td>{{ spawn.emote }}</td>
+    <td>{{ spawn.aiAnimKit }}</td>
+    <td>{{ spawn.movementAnimKit }}</td>
+    <td>{{ spawn.meleeAnimKit }}</td>
     <td>{{ spawn.auras }}</td>
   </tr>
 </table>
